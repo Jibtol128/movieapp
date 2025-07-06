@@ -1,0 +1,215 @@
+/* UserProfile.css - Modern, cinematic style for user profile page */
+
+.user-profile-container {
+  max-width: 1000px;
+  margin: 40px auto 0 auto;
+  background: linear-gradient(135deg, rgba(20, 20, 30, 0.98) 0%, rgba(30, 30, 45, 0.95) 100%);
+  border-radius: 20px;
+  box-shadow: 0 12px 40px 0 rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1);
+  padding: 50px 40px 40px 40px;
+  color: #f5f5f7;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  position: relative;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.user-profile-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ef233c 0%, #d90429 50%, #ef233c 100%);
+  border-radius: 20px 20px 0 0;
+}
+
+.user-profile-header {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.user-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ef233c 0%, #8d99ae 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.2rem;
+  color: #fff;
+  box-shadow: 0 4px 20px 0 rgba(239, 35, 60, 0.4);
+  border: 3px solid rgba(255,255,255,0.2);
+  font-weight: 700;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-info h2 {
+  margin: 0 0 8px 0;
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #f5f5f7 0%, #e0e0e0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.user-info p {
+  margin: 0;
+  color: #bfc0c0;
+  font-size: 1.15rem;
+}
+
+.profile-section {
+  margin-bottom: 44px;
+}
+
+.profile-section-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+  border-left: 5px solid #ef233c;
+  padding-left: 16px;
+  letter-spacing: 0.8px;
+  position: relative;
+}
+
+.profile-section-title::after {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background: linear-gradient(135deg, #ef233c 0%, #d90429 100%);
+  border-radius: 3px;
+}
+
+.profile-lists, .profile-reviews {
+  background: rgba(25, 25, 35, 0.95);
+  border-radius: 16px;
+  padding: 24px 28px;
+  box-shadow: 0 4px 16px 0 rgba(0,0,0,0.25);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.profile-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.2s ease;
+}
+
+.profile-list-item:last-child {
+  border-bottom: none;
+}
+
+.profile-list-item:hover {
+  background: rgba(239, 35, 60, 0.08);
+  margin: 0 -28px;
+  padding: 16px 28px;
+  border-radius: 8px;
+}
+
+.profile-list-name {
+  font-size: 1.18rem;
+  color: #f5f5f7;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.profile-list-name:hover {
+  color: #ef233c;
+}
+
+.profile-list-actions button {
+  background: linear-gradient(135deg, #ef233c 0%, #d90429 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  margin-left: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px 0 rgba(239, 35, 60, 0.3);
+}
+
+.profile-list-actions button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px 0 rgba(239, 35, 60, 0.4);
+}
+
+.profile-review-item {
+  background: rgba(35, 35, 50, 0.98);
+  border-radius: 12px;
+  margin-bottom: 18px;
+  padding: 20px 24px;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.15);
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: all 0.2s ease;
+}
+
+.profile-review-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px 0 rgba(0,0,0,0.25);
+}
+
+.profile-review-movie {
+  font-size: 1.08rem;
+  color: #8d99ae;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.profile-review-text {
+  color: #f5f5f7;
+  font-size: 1.12rem;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.profile-review-date {
+  color: #bfc0c0;
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .user-profile-container {
+    margin: 20px 16px 0 16px;
+    padding: 28px 20px;
+  }
+  
+  .user-profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .user-avatar {
+    width: 80px;
+    height: 80px;
+    font-size: 2.5rem;
+  }
+  
+  .user-info h2 {
+    font-size: 2rem;
+  }
+}
